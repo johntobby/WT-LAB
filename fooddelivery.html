@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlinkEats - Food Delivery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <link rel="stylesheet" href="10.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+    <div class="logo">🍔 BlinkEats</div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fooddelivery.html" class="active">Food Delivery</a></li>
+        <li><a href="catering.html">Catering</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Food Delivery</h1>
+    <p>Order from your favorite restaurants and get it delivered fast</p>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search for restaurants or cuisines">
+      <button onclick="searchRestaurants()">Search</button>
+    </div>
+  </section>
+
+  <section class="restaurants">
+    <div class="section-header">
+        <h2>Discover best restaurants on BlinkEats</h2>
+        <div class="navigation-arrows">
+            <button class="arrow"><i class="fas fa-arrow-left"></i></button>
+            <button class="arrow"><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+    
+    <div class="restaurant-list" id="restaurantList">
+        <div class="restaurant-card">
+            <div class="card-image-wrapper">
+                <img src="Burger.jpeg" alt="Burger">
+                <span class="discount-badge">30% OFF</span>
+                <div class="rating-overlay"><i class="fas fa-star"></i> 3.9</div>
+            </div>
+            <div class="card-details">
+                <h3 class="restaurant-name">The Burger Shack</h3>
+                <p class="cuisine-info">Multi Cuisine • Fast Food • Beach Road,Visakhapatnam</p>
+                <div class="price-distance">
+                    <span>₹500 for two</span>
+                    <span>3.2 km</span>
+                </div>
+                <div class="offers">
+                    <span class="offer-tag"><i class="fas fa-tag"></i> Table booking</span>
+                    <span class="offer-tag"><i class="fas fa-tag"></i> Free Dessert</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="primary-offer">Flat 50% off on pre-booking <span class="more-offers">+ 6 more</span></button>
+                    <button class="secondary-offer">Up to 10% off with bank offers</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="card-image-wrapper">
+                <img src="Pizza.jpg" alt="Pizza">
+                <span class="discount-badge">30% OFF</span> <div class="rating-overlay"><i class="fas fa-star"></i> 4.1</div>
+            </div>
+            <div class="card-details">
+                <h3 class="restaurant-name">Pizza Palace</h3>
+                <p class="cuisine-info">Italian • Pizzas • IT-Sez, Visakhapatnam</p>
+                <div class="price-distance">
+                    <span>₹600 for two</span>
+                    <span>4.5 km</span>
+                </div>
+                <div class="offers">
+                    <span class="offer-tag"><i class="fas fa-tag"></i> Table booking</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="primary-offer">Flat 50% off on pre-booking <span class="more-offers">+ 4 more</span></button>
+                    <button class="secondary-offer">Up to 10% off with bank offers</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="card-image-wrapper">
+                <img src="Chinese.jpg" alt="Chinese">
+                <span class="discount-badge">25% OFF</span>
+                <div class="rating-overlay"><i class="fas fa-star"></i> 4.5</div>
+            </div>
+            <div class="card-details">
+                <h3 class="restaurant-name"> Marlin Cay</h3>
+                <p class="cuisine-info">Bar Food • Multi Cuisine • Bheemli, Visakhapatnam</p>
+                <div class="price-distance">
+                    <span>₹900 for two</span>
+                    <span>8.2 km</span>
+                </div>
+                <div class="offers">
+                    <span class="offer-tag"><i class="fas fa-tag"></i> Table booking</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="primary-offer">Flat 15% off on pre-booking <span class="more-offers">+ 2 more</span></button>
+                    <button class="secondary-offer">Up to 10% off with bank offers</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="restaurant-card">
+            <div class="card-image-wrapper">
+                <img src="IceCream.jpeg" alt="IceCreams">
+                <span class="discount-badge">15% OFF</span>
+                <div class="rating-overlay"><i class="fas fa-star"></i> 4.2</div>
+            </div>
+            <div class="card-details">
+                <h3 class="restaurant-name">Frosty Treats</h3>
+                <p class="cuisine-info">Desserts • Ice Creams • Rushikonda, Visakhapatnam</p>
+                <div class="price-distance">
+                    <span>₹300 for two</span>
+                    <span>5.1 km</span>
+                </div>
+                <div class="offers">
+                    <span class="offer-tag"><i class="fas fa-tag"></i> Takeaway available</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="primary-offer">Flat 20% off on orders <span class="more-offers">+ 1 more</span></button>
+                    <button class="secondary-offer">Up to 5% off with bank offers</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="card-image-wrapper">
+                <img src="Biryani.jpeg" alt="Biryani">
+                <span class="discount-badge">40% OFF</span>
+                <div class="rating-overlay"><i class="fas fa-star"></i> 4.6</div>
+            </div>
+            <div class="card-details">
+                <h3 class="restaurant-name">Bhawarchi</h3>
+                <p class="cuisine-info">Indian • Biryani • Yendada, Visakhapatnam</p>
+                <div class="price-distance">
+                    <span>₹700 for two</span>
+                    <span>2.8 km</span>
+                </div>
+                <div class="offers">
+                    <span class="offer-tag"><i class="fas fa-tag"></i> Free delivery</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="primary-offer">Flat 40% off on pre-booking <span class="more-offers">+ 5 more</span></button>
+                    <button class="secondary-offer">Up to 15% off with bank offers</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="card-image-wrapper">
+                <img src="Shawarma.jpeg" alt="Shawarma">
+                <span class="discount-badge">40% OFF</span>
+                <div class="rating-overlay"><i class="fas fa-star"></i> 3.8</div>
+            </div>
+            <div class="card-details">
+                <h3 class="restaurant-name">The Shawarma Spot</h3>
+                <p class="cuisine-info">Middle Eastern • Wraps • Madhurawada, Visakhapatnam</p>
+                <div class="price-distance">
+                    <span>₹450 for two</span>
+                    <span>6.0 km</span>
+                </div>
+                <div class="offers">
+                    <span class="offer-tag"><i class="fas fa-tag"></i> Dine-in available</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="primary-offer">Flat 30% off on orders <span class="more-offers">+ 3 more</span></button>
+                    <button class="secondary-offer">Up to 10% off with bank offers</button>
+                </div>
+            </div>
+        </div>
+        </div>
+  </section>
+  <footer>
+  <div class="footer-content">
+    <h2><span class="brand">🍔 BlinkEats</span></h2>
+    <p>Your Order, Our Passion</p>
+    <p class="copyright">© 2025 BlinkEats. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <script src="10.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

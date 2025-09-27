@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering Services - BlinkEats</title>
+  <link rel="stylesheet" href="11.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="index.html">
+    <div class="logo">BlinkEats</div>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="10delivery.html">Food Delivery</a></li>
+        <li><a href="11catering.html">Catering</a></li>
+       
+      </ul>
+    </nav>
+    
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1><span class="highlight">Catering</span> Services</h1>
+    <p>
+      Professional catering for all your special events and occasions. From intimate 
+      gatherings to large celebrations, we’ve got you covered.
+    </p>
+    <div class="btn-group">
+      <button class="btn red" onclick="getQuote()">Get Quote</button>
+      <button class="btn green" onclick="firstOrder()">UP TO 10% OFF YOUR FIRST ORDER</button>
+      <button class="btn outline" onclick="callUs()">Call Us</button>
+    </div>
+  </section>
+
+  <!-- Catering Options -->
+  <section class="options">
+    <h2>Catering Options:</h2>
+    <p>Choose from our variety of catering services tailored to your event type.</p>
+  </section>
+
+
+  <section class="container">
+    
+    <!-- Corporate Events -->
+    <div class="card">
+      <img src="Corporate.jpeg" alt="Corporate Events">
+      <div class="content">
+        <h2>Corporate Events</h2>
+        <p>Professional catering for meetings, conferences, and corporate gatherings.</p>
+        <ul>
+          <li>₹ 15,000 onwards</li>
+          <li>50–500 Guests</li>
+          <li>Professional Staff</li>
+          <li>Custom Menus</li>
+        </ul>
+        <button onclick="requestQuote('Corporate Events')">Request Quote</button>
+      </div>
+    </div>
+
+    <!-- Wedding Catering -->
+    <div class="card">
+      <img src="Weddings.jpg" alt="Wedding Catering">
+      <div class="content">
+        <h2>Wedding Catering</h2>
+        <p>Make your wedding unforgettable with our exquisite catering services.</p>
+        <ul>
+          <li>₹ 50,000 onwards</li>
+          <li>200–1000 Guests</li>
+          <li>Wedding Specials</li>
+          <li>Elegant Presentation</li>
+        </ul>
+        <button onclick="requestQuote('Wedding Catering')">Request Quote</button>
+      </div>
+    </div>
+
+    <!-- Party Catering -->
+    <div class="card">
+      <img src="Party.jpeg" alt="Party Catering">
+      <div class="content">
+        <h2>Party Catering</h2>
+        <p>Fun and delicious catering for birthdays, anniversaries, and celebrations.</p>
+        <ul>
+          <li>₹ 8,000 onwards</li>
+          <li>20–200 Guests</li>
+          <li>Party Favorites</li>
+          <li>Fun Serving Options</li>
+        </ul>
+        <button onclick="requestQuote('Party Catering')">Request Quote</button>
+      </div>
+    </div>
+
+  </section>
+
+ 
+  <section class="quote-section">
+    <h2>Ready to Plan Your Event?</h2>
+    <p>Contact us today for a personalized quote and let us make your event unforgettable.</p>
+    
+    <form id="quoteForm" class="quote-form">
+      
+      <!-- Select Package -->
+      <label for="package">Select Package</label>
+      <select id="package" name="package" required>
+        <option value="">-- Choose a package --</option>
+        <option value="corporate">Corporate Events</option>
+        <option value="wedding">Wedding Catering</option>
+        <option value="party">Party Catering</option>
+      </select>
+
+      <!-- Select Service -->
+      <label for="service">Select Service</label>
+      <select id="service" name="service" required>
+        <option value="">-- Choose a service --</option>
+        <option value="all-day">All Day Service</option>
+        <option value="half-day">Half Day Service</option>
+        <option value="custom">Custom Service</option>
+      </select>
+
+      <!-- Message Box -->
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Tell us about your event..." required></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit">Get Custom Quote</button>
+    </form>
+  </section>
+
+  <footer>
+  
+    <h2><span class="brand">🍔 BlinkEats</span></h2>
+    <p>Your Order, Our Passion</p>
+    <p class="copyright">© 2025 BlinkEats. All Rights Reserved.</p>
+  </div>
+</footer>
+  <script src="11.js"></script>
+</body>
+</html>

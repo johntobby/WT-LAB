@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cee39e;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.table {
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.table td {
+    padding: 10px;
+}
+
+input {
+    padding: 8px;
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkorange;
+}
