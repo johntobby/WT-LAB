@@ -1,34 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sign In</title>
-  <link rel="stylesheet" href="4signstyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>SIGN-IN</h1>
 
-  <form id="signin-form">
-    <table class="table">
-      <tr>
-        <td><label for="Username">Username:</label></td>
-        <td><input type="text" name="username" placeholder="Enter your Username" required></td>
-      </tr>
-      <tr>
-        <td><label for="password">Password:</label></td>
-        <td><input type="password" name="password" placeholder="Enter password" required></td>
-      </tr>
-      <tr>
-        <td colspan="2" style="text-align: center;">
-          <button type="submit">Sign In</button>
-        </td>
-      </tr>
-    </table>
-  </form>
+    <div class="modal-container">
+        <div class="form-panel">
+            <span class="close-btn">&times;</span>
+            
+            <div class="form-header">
+                <h2 id="form-title">Login</h2>
+                <p>or <a href="#" id="toggle-link">create an account</a></p>
+            </div>
 
-  <p style="text-align:center; margin-top:10px;">
-    Don't have an account? <a href="signup.html">Sign Up</a>
-  </p>
+            <form id="auth-form">
+                <div class="input-group">
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="phone">Phone number</label>
+                </div>
+                
+                <div id="signup-fields" class="hidden">
+                    <div class="input-group">
+                        <input type="text" id="name" name="name">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                 <p class="ref-text hidden" id="ref-text"><a href="#">Have a referral code?</a></p>
 
-  <script src="signin.js"></script>
+                <button type="submit" id="submit-btn">LOGIN</button>
+            </form>
+            
+            <p class="terms-text" id="login-terms">
+                By clicking on Login, I accept the Terms & Conditions & Privacy Policy
+            </p>
+             <p class="terms-text hidden" id="signup-terms">
+                By creating an account, I accept the Terms & Conditions & Privacy Policy
+            </p>
+
+        </div>
+
+        <div class="image-panel">
+            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r" alt="Food Wrap">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
