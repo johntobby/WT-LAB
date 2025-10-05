@@ -1,39 +1,57 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #cee39e;
-    padding: 40px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
-}
+    <div class="modal-container">
+        <div class="form-panel">
+            <span class="close-btn">&times;</span>
+            
+            <div class="form-header">
+                <h2 id="form-title">Login</h2>
+                <p>or <a href="#" id="toggle-link">create an account</a></p>
+            </div>
 
-.table {
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-}
+            <form id="auth-form">
+                <div class="input-group">
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="phone">Phone number</label>
+                </div>
+                
+                <div id="signup-fields" class="hidden">
+                    <div class="input-group">
+                        <input type="text" id="name" name="name">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                 <p class="ref-text hidden" id="ref-text"><a href="#">Have a referral code?</a></p>
 
-.table td {
-    padding: 10px;
-}
+                <button type="submit" id="submit-btn">LOGIN</button>
+            </form>
+            
+            <p class="terms-text" id="login-terms">
+                By clicking on Login, I accept the Terms & Conditions & Privacy Policy
+            </p>
+             <p class="terms-text hidden" id="signup-terms">
+                By creating an account, I accept the Terms & Conditions & Privacy Policy
+            </p>
 
-input {
-    padding: 8px;
-    width: 100%;
-}
+        </div>
 
-button {
-    padding: 10px 20px;
-    background-color: orange;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+        <div class="image-panel">
+            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r" alt="Food Wrap">
+        </div>
+    </div>
 
-button:hover {
-    background-color: darkorange;
-}
+    <script src="script.js"></script>
+</body>
+</html>
