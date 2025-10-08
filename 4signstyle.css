@@ -1,146 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;600;700&display=swap');
-
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
-    font-family: 'Proxima Nova', sans-serif;
 }
 
-.modal-container {
-    display: flex;
-    width: 800px;
-    height: 550px;
-    background-color: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.auth-container {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
     position: relative;
-}
-
-/* Left Form Panel */
-.form-panel {
-    width: 60%;
-    padding: 40px 60px;
     box-sizing: border-box;
-    position: relative;
 }
 
 .close-btn {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 25px;
     font-size: 28px;
-    color: #333;
+    color: #888;
     cursor: pointer;
+    line-height: 1;
 }
 
-.form-header {
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
-.form-header h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin: 0;
-    color: #282c3f;
-}
-
-.form-header p {
-    margin: 5px 0 0;
-    font-size: 14px;
-    color: #686b78;
-}
-
-.form-header a {
-    text-decoration: none;
-    color: #fc8019;
-    font-weight: 600;
-}
-
-/* Input Fields Styling */
-.input-group {
-    position: relative;
-    margin-bottom: 25px;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 15px 0;
-    font-size: 16px;
-    border: none;
-    border-bottom: 2px solid #bebfc5;
-    outline: none;
-    background: transparent;
-}
-
-.input-group label {
+.logo-img {
     position: absolute;
-    top: 15px;
-    left: 0;
+    top: 20px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #eee;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1c1c1c;
+    margin: 0;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.sub-heading {
+    margin: 5px 0 30px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.sub-heading a {
+    color: inherit;
+    text-decoration: underline; /* This line was changed */
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+input[type="tel"],
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     font-size: 16px;
-    color: #93959f;
-    pointer-events: none;
-    transition: 0.2s ease all;
+    box-sizing: border-box;
 }
 
-/* Floating Label Animation */
-.input-group input:focus ~ label,
-.input-group input:valid ~ label {
-    top: -5px;
-    font-size: 12px;
-    color: #686b78;
-}
-.input-group input:focus {
-    border-bottom: 2px solid #fc8019;
-}
-
-
-/* Button Styling */
-#submit-btn {
+.btn {
     width: 100%;
     padding: 15px;
     background-color: #fc8019;
-    border: none;
     color: white;
+    border: none;
+    border-radius: 8px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: bold;
     cursor: pointer;
-    margin-top: 20px;
-}
-.ref-text {
-    font-size: 14px;
-    margin-top: -10px;
-    margin-bottom: 20px;
-}
-.ref-text a {
-    text-decoration: none;
-    color: #5d8ed5;
-    font-weight: 600;
+    transition: background-color 0.2s;
 }
 
-/* Terms Text */
-.terms-text {
-    font-size: 11px;
-    color: #a9abb2;
-    margin-top: 10px;
+.btn:hover {
+    background-color: #e06f15;
 }
 
-/* Right Image Panel */
-.image-panel {
-    width: 40%;
-    background-color: #fff; /* In case image doesn't load */
-}
-
-.image-panel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Utility class to hide elements */
-.hidden {
-    display: none;
+.legal-text {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    margin-top: 25px;
+    line-height: 1.5;
 }
