@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="4signstyle.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <span class="close-btn">&times;</span>
+            <img src="Logo.png" alt="Logo" class="logo-img">
+        </div>
+        
+        <h1>Sign up</h1>
+        <p class="sub-heading">or <a href="signin.html">login to your account</a></p>
+
+        <form id="signupForm">
+            <div class="input-group">
+                <input type="tel" id="phone" placeholder="Phone number" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="firstName" placeholder="First Name" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="lastName" placeholder="Last Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            
+            <button type="submit" class="btn">CONTINUE</button>
+        </form>
+
+        <p class="legal-text">
+            By creating an account, I accept the Terms & Conditions & Privacy Policy
+        </p>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
