@@ -1,51 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Get all the elements we need to manipulate
-    const toggleLink = document.getElementById('toggle-link');
-    const formTitle = document.getElementById('form-title');
-    const signupFields = document.getElementById('signup-fields');
-    const submitBtn = document.getElementById('submit-btn');
-    const loginTerms = document.getElementById('login-terms');
-    const signupTerms = document.getElementById('signup-terms');
-    const refText = document.getElementById('ref-text');
+    const loginForm = document.getElementById('loginForm');
 
-    // Variable to track the current state (true for login, false for sign-up)
-    let isLoginView = true;
-
-    // Add a click event listener to the toggle link
-    toggleLink.addEventListener('click', (event) => {
-        // Prevent the link from navigating
+    loginForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        // Toggle the state
-        isLoginView = !isLoginView;
+        const identifier = document.getElementById('identifier').value.trim();
+        const password = document.getElementById('password').value;
 
-        if (isLoginView) {
-            // Switch to Login View
-            formTitle.textContent = 'Login';
-            toggleLink.textContent = 'create an account';
-            submitBtn.textContent = 'LOGIN';
-            
-            // Hide sign-up specific elements
-            signupFields.classList.add('hidden');
-            signupTerms.classList.add('hidden');
-            refText.classList.add('hidden');
-            
-            // Show login specific elements
-            loginTerms.classList.remove('hidden');
+        const users = JSON.parse(localStorage.getItem('users')) || [];
 
+        const foundUser = users.find(user => 
+            (user.email === identifier || user.phone === identifier) && user.password === password
+        );
+
+        if (foundUser) {
+            // 1. Save the logged-in user's data to sessionStorage
+            sessionStorage.setItem('loggedInUser', JSON.stringify(foundUser));
+            
+            // 2. Redirect to the homepage
+            window.location.href = 'index.html'; 
         } else {
-            // Switch to Sign Up View
-            formTitle.textContent = 'Sign up';
-            toggleLink.textContent = 'login to your account';
-            submitBtn.textContent = 'CONTINUE';
-            
-            // Show sign-up specific elements
-            signupFields.classList.remove('hidden');
-            signupTerms.classList.remove('hidden');
-            refText.classList.remove('hidden');
-
-            // Hide login specific elements
-            loginTerms.classList.add('hidden');
+            alert("Invalid email/phone or password. Please try again.");
         }
     });
 });
