@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BlinkEats - Food Delivery</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <link rel="stylesheet" href="10.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="10.css">
 </head>
 <body>
   <header>
@@ -17,6 +18,12 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="fooddelivery.html" class="active">Food Delivery</a></li>
         <li><a href="catering.html">Catering</a></li>
+        <li>
+          <a href="#" id="cartIcon">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartItemCount" class="cart-item-count">0</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -40,7 +47,7 @@
     </div>
     
     <div class="restaurant-list" id="restaurantList">
-        <div class="restaurant-card">
+        <div class="restaurant-card" data-restaurant-name="The Burger Shack">
             <div class="card-image-wrapper">
                 <img src="Burger.jpeg" alt="Burger">
                 <span class="discount-badge">30% OFF</span>
@@ -64,7 +71,7 @@
             </div>
         </div>
 
-        <div class="restaurant-card">
+        <div class="restaurant-card" data-restaurant-name="Pizza Palace">
             <div class="card-image-wrapper">
                 <img src="Pizza.jpg" alt="Pizza">
                 <span class="discount-badge">30% OFF</span> <div class="rating-overlay"><i class="fas fa-star"></i> 4.1</div>
@@ -86,7 +93,7 @@
             </div>
         </div>
 
-        <div class="restaurant-card">
+        <div class="restaurant-card" data-restaurant-name="Marlin Cay">
             <div class="card-image-wrapper">
                 <img src="Chinese.jpg" alt="Chinese">
                 <span class="discount-badge">25% OFF</span>
@@ -109,7 +116,7 @@
             </div>
         </div>
         
-        <div class="restaurant-card">
+        <div class="restaurant-card" data-restaurant-name="Frosty Treats">
             <div class="card-image-wrapper">
                 <img src="IceCream.jpeg" alt="IceCreams">
                 <span class="discount-badge">15% OFF</span>
@@ -132,7 +139,7 @@
             </div>
         </div>
 
-        <div class="restaurant-card">
+        <div class="restaurant-card" data-restaurant-name="Bhawarchi">
             <div class="card-image-wrapper">
                 <img src="Biryani.jpeg" alt="Biryani">
                 <span class="discount-badge">40% OFF</span>
@@ -155,7 +162,7 @@
             </div>
         </div>
 
-        <div class="restaurant-card">
+        <div class="restaurant-card" data-restaurant-name="The Shawarma Spot">
             <div class="card-image-wrapper">
                 <img src="Shawarma.jpeg" alt="Shawarma">
                 <span class="discount-badge">40% OFF</span>
@@ -177,15 +184,44 @@
                 </div>
             </div>
         </div>
-        </div>
+      </div>
   </section>
-  <footer>
-  <div class="footer-content">
-    <h2><span class="brand">🍔 BlinkEats</span></h2>
-    <p>Your Order, Our Passion</p>
-    <p class="copyright">© 2025 BlinkEats. All Rights Reserved.</p>
+
+  <div id="menuModal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalRestaurantName">Restaurant Menu</h2>
+        <button id="closeMenuModal" class="close-button">&times;</button>
+      </div>
+      <div id="menuItems" class="modal-body">
+        </div>
+    </div>
   </div>
-</footer>
+
+  <div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="closeCart" class="close-button">&times;</button>
+    </div>
+    <div id="cartItems" class="cart-items">
+      <p class="empty-cart-message">Your cart is empty.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="subtotal">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">₹0</span>
+      </div>
+      <button class="checkout-button">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <h2><span class="brand">🍔 BlinkEats</span></h2>
+      <p>Your Order, Our Passion</p>
+      <p class="copyright">© 2025 BlinkEats. All Rights Reserved.</p>
+    </div>
+  </footer>
 
   <script src="10.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
